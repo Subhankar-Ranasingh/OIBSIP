@@ -1,62 +1,82 @@
-# Car Price Prediction with Machine Learning
+# Email Spam Detection with Machine Learning
+
+## Project Overview
+
+This project focuses on detecting whether an email or text message is **Spam** or **Ham (Not Spam)** using Machine Learning and Natural Language Processing (NLP).
+
+The project uses **TF-IDF Vectorization** to convert text messages into numerical features and compares two machine learning algorithms:
+
+* Naive Bayes
+* Logistic Regression
 
 ## Objective
 
-The objective of this project is to predict the price of used cars using machine learning techniques.
+The main objective of this project is to build a machine learning model that can automatically classify messages as Spam or Ham.
 
 ## Dataset
 
-The dataset contains information about used cars, including:
+The project uses the **Spam/Ham Detection Dataset**.
 
-- Brand
-- Model
-- Model Year
-- Mileage
-- Fuel Type
-- Engine
-- Transmission
-- Accident History
-- Clean Title
-- Price
+The dataset contains **5,572 messages**:
+
+* Ham: 4,825
+* Spam: 747
 
 ## Technologies Used
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Jupyter Notebook
+* Natural Language Processing (NLP)
 
 ## Project Workflow
 
-1. Loaded the dataset
-2. Checked data types and missing values
-3. Cleaned mileage and price columns
-4. Performed Exploratory Data Analysis
-5. Selected important features
-6. Encoded categorical features
-7. Split the data into 80% training and 20% testing
-8. Trained Linear Regression and Random Forest models
-9. Evaluated model performance
-10. Compared the models
+1. Load the dataset
+2. Clean and prepare the data
+3. Remove unnecessary columns
+4. Convert labels into numerical values
+5. Preprocess text messages
+6. Split the dataset into training and testing sets
+7. Apply TF-IDF Vectorization
+8. Train Naive Bayes model
+9. Train Logistic Regression model
+10. Evaluate model performance
+11. Create a confusion matrix
+12. Test the model on a new message
 
-## Model Results
+## Model Performance
 
-| Model | MAE | RMSE | R² Score |
-|---|---:|---:|---:|
-| Linear Regression | 28911.94 | 138697.82 | 0.0588 |
-| Random Forest | 27090.58 | 137365.06 | 0.0768 |
+| Model               | Accuracy |
+| ------------------- | -------: |
+| Naive Bayes         |   96.05% |
+| Logistic Regression |   97.22% |
 
-## Best Model
+### Best Model
 
-Random Forest Regressor performed better than Linear Regression because it achieved lower MAE and RMSE and a higher R² score.
+**Logistic Regression** achieved the highest test accuracy of **97.22%** and performed better than Naive Bayes on this dataset.
+
+## Prediction Example
+
+The final Logistic Regression model was tested with a new message:
+
+> "Congratulations! You have won a free prize. Click now!"
+
+The model predicted:
+
+**Spam**
 
 ## Conclusion
 
-This project demonstrates the complete machine learning workflow for used car price prediction, including data cleaning, exploratory data analysis, feature selection, encoding, model training, prediction, and evaluation.
+This project demonstrates how Natural Language Processing and Machine Learning can be used to classify text messages as Spam or Ham.
+
+TF-IDF was used to convert text into numerical features, while Naive Bayes and Logistic Regression were used for classification.
+
+Among the two models, **Logistic Regression performed better with an accuracy of 97.22%**.
 
 ## Author
 
-Subhankar Ranasingh
+**Subhankar Ranasingh**
